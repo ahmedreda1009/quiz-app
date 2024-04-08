@@ -16,4 +16,29 @@ const newAnswer = (idx) => {
 	return { type: ACTION_TYPES.NEW_ANSWER, payload: idx };
 };
 
-export { recieveData, dataFailed, quizActive, newAnswer };
+const nextQuestion = () => {
+	return { type: ACTION_TYPES.NEXT_QUESTION };
+};
+
+const finishQuiz = () => {
+	return { type: ACTION_TYPES.FINISH_QUIZ };
+};
+
+const restartQuiz = () => {
+	return { type: ACTION_TYPES.RESTART_QUIZ };
+};
+
+const timePass = () => {
+	return { type: ACTION_TYPES.TIME_PASS };
+};
+
+export {
+	recieveData,
+	dataFailed,
+	quizActive,
+	newAnswer,
+	nextQuestion,
+	finishQuiz,
+	restartQuiz,
+	timePass,
+};

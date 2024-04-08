@@ -6,4 +6,7 @@ export const initialState = {
 	status: STATUS.LOADING,
 	currQuestionIdx: 0,
 	currAnswerIdx: null,
+	points: 0,
+	highscore: 0,
+	remainingTime: null,
 };

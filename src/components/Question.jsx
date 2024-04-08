@@ -1,11 +1,14 @@
 import Options from './Options';
 
-const Question = ({ question, dispatch }) => {
-	console.log(question);
+const Question = ({ question, dispatch, currAnswerIdx }) => {
 	return (
 		<div>
 			<h4>{question.question}</h4>
-			<Options question={question} dispatch={dispatch} />
+			<Options
+				question={question}
+				dispatch={dispatch}
+				currAnswerIdx={currAnswerIdx}
+			/>
 		</div>
 	);
 };
