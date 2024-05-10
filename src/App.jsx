@@ -17,6 +17,7 @@ import { initialState } from './state/initialState';
 import Progress from './components/Progress';
 import FinishScreen from './components/FinishScreen';
 import Timer from './components/Timer';
+import data from './data/data.js';
 
 function App() {
 	const [
@@ -39,18 +40,19 @@ function App() {
 	);
 
 	useEffect(() => {
-		fetch('http://localhost:8000/questions')
-			.then((res) => {
-				return res.json();
-			})
-			.then((data) => {
-				// console.log(data);
-				dispatch(recieveData(data));
-			})
-			.catch((err) => {
-				console.log(err);
-				dispatch(dataFailed());
-			});
+		// fetch('http://localhost:8000/questions')
+		// 	.then((res) => {
+		// 		return res.json();
+		// 	})
+		// 	.then((data) => {
+		// 		// console.log(data);
+		// 		dispatch(recieveData(data));
+		// 	})
+		// 	.catch((err) => {
+		// 		console.log(err);
+		// 		dispatch(dataFailed());
+		// 	});
+		dispatch(recieveData(data));
 	}, []);
 
 	return (
